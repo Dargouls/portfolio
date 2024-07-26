@@ -12,7 +12,7 @@ export default function Presentation() {
 	return (
 		<>
 			<section
-				className={`flex flex-col w-full md:h-screen max-h-[1000px] px-4 text-center relative justify-center items-center h-[calc(100vh-148px)]`}
+				className={`flex flex-col w-full md:h-screen max-h-[1000px] px-4 text-center relative justify-center items-center h-[calc(100vh-140px)]`}
 			>
 				<Image
 					data-aos='fade-up'

@@ -14,7 +14,7 @@ export default function ProjectCard({ name, description, url, image }: ProjectCa
 			<div className='group flex flex-col gap-2 md:max-w-[300px] bg-background-light rounded-xl p-2 cursor-pointer'>
 				<div id='image-container' className='w-full overflow-hidden rounded-lg'>
 					<Image
-						className='group-hover:scale-110 w-full brightness-50 blur-[2px] transition-all duration-700'
+						className='group-hover:scale-110 group-active:scale-100 w-full brightness-50 blur-[2px] transition-all duration-700'
 						src={image}
 						alt={name}
 						height={200}
