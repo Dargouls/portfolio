@@ -12,17 +12,19 @@ export default function Presentation() {
 	return (
 		<>
 			<section
-				className={`flex flex-col w-full md:h-screen max-h-[1000px] px-4 text-center relative justify-center items-center h-[calc(100vh-140px)]`}
+				className={`flex flex-col w-full md:h-screen max-h-[1000px] px-4 text-center relative justify-center items-center h-[calc(100vh-136px)]`}
 			>
-				<Image
-					data-aos='fade-up'
-					data-aos-duration='900'
-					className='shadow-grand rounded-full'
-					src={me}
-					alt='Me'
-					height={128}
-					width={128}
-				/>
+				<div id='image-container' className='w-32 h-32'>
+					<Image
+						data-aos='fade-up'
+						data-aos-duration='900'
+						className='shadow-grand rounded-full'
+						src={me}
+						alt='Me'
+						height={720}
+						width={720}
+					/>
+				</div>
 
 				<h1 data-aos='fade-up' data-aos-duration='1400' data-aos-delay='100'>
 					Olá! Me chamo Gabriel
