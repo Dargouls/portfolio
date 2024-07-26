@@ -17,9 +17,9 @@ export default function Footer() {
 					<div className='flex flex-wrap gap-10 w-full justify-evenly items-center'>
 						<Image src={logo} alt='logo' />
 
-						<div className='flex flex-wrap gap-4'>
+						<div className='flex flex-wrap gap-4 justify-center md:justify-start'>
 							<section className='flex flex-col gap-4 p-8'>
-								<h3>Services</h3>
+								<h3>Serviços</h3>
 
 								<Link className='underline text-default-text-strong hover:text-default-text' href='/'>
 									Dashboards

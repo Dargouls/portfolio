@@ -5,7 +5,7 @@ export default function Header() {
 	return (
 		<>
 			<header
-				className='w-full fixed px-4 pt-4 z-infinity backdrop-blur-sm h-0 md:h-auto'
+				className={`w-full fixed px-4 pt-4 z-infinity backdrop-blur-sm h-0 md:h-auto calc`}
 				style={{ backgroundColor: 'rgba(255, 255, 255, 0.001)' }}
 			>
 				<Link href={'/'} className='block w-max'>

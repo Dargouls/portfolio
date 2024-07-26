@@ -1,6 +1,6 @@
 'use client';
 
-import { ArrowDown } from 'lucide-react';
+import { ChevronDown } from 'lucide-react';
 import { useEffect, useState } from 'react';
 
 export default function DownPage() {
@@ -31,10 +31,10 @@ export default function DownPage() {
 	return (
 		<>
 			<div
-				className={`fixed right-4 bottom-4 bg-primary-1000 rounded-full p-5 transition-all duration-300 ${visible ? 'opacity-100' : 'opacity-0'}`}
+				className={`absolute bottom-0 px-8 pb-2 transition-all duration-300 ${visible ? 'opacity-100' : 'opacity-0'}`}
 				onClick={handleDownPage}
 			>
-				<ArrowDown size={24} />
+				<ChevronDown className='text-slate-500 cursor-pointer' size={32} />
 			</div>
 		</>
 	);

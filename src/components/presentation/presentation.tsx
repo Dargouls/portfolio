@@ -7,10 +7,13 @@ import Image from 'next/image';
 import Link from 'next/link';
 
 import 'aos/dist/aos.css';
+import DownPage from '../downPage/downPage';
 export default function Presentation() {
 	return (
 		<>
-			<section className='flex flex-col w-full h-screen max-h-[1000px] px-4 text-center relative justify-center items-center'>
+			<section
+				className={`flex flex-col w-full md:h-screen max-h-[1000px] px-4 text-center relative justify-center items-center h-[calc(100vh-64px)]`}
+			>
 				<Image
 					data-aos='fade-up'
 					data-aos-duration='900'
@@ -41,6 +44,7 @@ export default function Presentation() {
 				>
 					<Pin />
 				</div>
+				<DownPage />
 			</section>
 		</>
 	);
