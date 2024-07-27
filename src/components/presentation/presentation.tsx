@@ -18,6 +18,7 @@ export default function Presentation() {
 					<Image
 						data-aos='fade-up'
 						data-aos-duration='900'
+						data-aos-delay='300'
 						className='shadow-grand rounded-full'
 						src={me}
 						alt='Me'
@@ -26,12 +27,12 @@ export default function Presentation() {
 					/>
 				</div>
 
-				<h1 data-aos='fade-up' data-aos-duration='1400' data-aos-delay='100'>
+				<h1 data-aos='fade-up' data-aos-duration='1400' data-aos-delay='400'>
 					Olá! Me chamo Gabriel
 				</h1>
 				<span
 					data-aos='fade-up'
-					data-aos-delay='200'
+					data-aos-delay='300'
 					className='max-w-[900px] text-center text-default-text-strong'
 				>
 					Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
@@ -40,7 +41,7 @@ export default function Presentation() {
 
 				<div
 					className='flex justify-center absolute bottom-16 w-full h-20'
-					data-aos='zoom-in'
+					data-aos='fade-up'
 					data-aos-duration='1000'
 					data-aos-delay='1000'
 				>
