@@ -57,11 +57,14 @@ function Pin() {
 	return (
 		<>
 			<div className='flex absolute bottom-0 gap-4 items-center justify-center bg-contrast py-1 px-6 rounded-full hover:px-10 hover:gap-6 transition-all duration-300 ease-bounce'>
-				<Link href={'/'}>
-					<Image src={linkedin} alt='Google' height={24} width={24} />
+				<Link href={'https://www.linkedin.com/in/gabriel-azevedo-b72b27191/'} target='_blank'>
+					<Image src={linkedin} alt='Linkedin' height={24} width={24} />
 				</Link>
-				<Link href={'/'}>
-					<Image src={whatsapp} alt='Google' height={24} width={24} />
+				<Link
+					href={'https://wa.me/5582991437150?text=Ol%C3%A1!%20Gostaria%20de%20saber%20mais'}
+					target='_blank'
+				>
+					<Image src={whatsapp} alt='Whatsapp' height={24} width={24} />
 				</Link>
 				<Link href={'/'}>
 					<Image src={google} alt='Google' height={24} width={24} />

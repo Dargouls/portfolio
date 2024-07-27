@@ -1,5 +1,4 @@
 import AppBar from '@/components/layout/appbar/appbar';
-import Footer from '@/components/layout/footer/footer';
 import Header from '@/components/layout/header/header';
 import NavBar from '@/components/layout/navbar/navbar';
 
@@ -29,7 +28,6 @@ export default function RootLayout({
 				<main>{children}</main>
 				<NavBar />
 				<AppBar />
-				<Footer />
 			</body>
 		</html>
 	);

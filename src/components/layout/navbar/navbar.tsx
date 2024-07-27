@@ -4,18 +4,21 @@ import github from '@/assets/icons/logos_github.svg';
 
 import Image from 'next/image';
 import Link from 'next/link';
-import { usePathname } from 'next/navigation';
+import { usePathname, useRouter } from 'next/navigation';
 import { useEffect, useState } from 'react';
+
 export default function NavBar() {
 	const pathname = usePathname();
+	const router = useRouter();
 	const [visible, setVisible] = useState(false);
 
+	const handleGoPage = () => {
+		if (pathname === '/') window.scrollTo({ top: 0, behavior: 'smooth' });
+		if (pathname !== '/') router.push('/');
+	};
+
 	const handleScroll = () => {
-		// console.log('pathname', pathname);
-		// console.log(window.scrollY);
-
 		if (window.scrollY > 180 && pathname === '/') setVisible(true);
-
 		if (window.scrollY < 180 && pathname === '/') setVisible(false);
 	};
 
@@ -50,9 +53,12 @@ export default function NavBar() {
 					</Link>
 				</div>
 				<div className='flex gap-8 px-8 py-6 bg-background-light rounded-md'>
-					<Link className='hover:text-default-text text-slate-600 font-semibold transition-all' href={'/'}>
+					<div
+						onClick={handleGoPage}
+						className='hover:text-default-text text-slate-600 font-semibold cursor-pointer transition-all'
+					>
 						Início
-					</Link>
+					</div>
 					<div className='w-px h-6 bg-slate-600' />
 					<Link
 						className='hover:text-default-text text-nowrap text-slate-600 font-semibold transition-all'
