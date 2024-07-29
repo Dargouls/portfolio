@@ -2,6 +2,7 @@ import AppBar from '@/components/layout/appbar/appbar';
 import Header from '@/components/layout/header/header';
 import NavBar from '@/components/layout/navbar/navbar';
 import SmoothScroll from '@/components/scrollsmooth/scrollsmooth';
+import { Analytics } from '@vercel/analytics/react';
 
 import type { Metadata } from 'next';
 import { Sen } from 'next/font/google';
@@ -31,6 +32,7 @@ export default function RootLayout({
 				</main>
 				<NavBar />
 				<AppBar />
+				<Analytics />
 			</body>
 		</html>
 	);

@@ -12,9 +12,9 @@ export default function NavBar() {
 	const router = useRouter();
 	const [visible, setVisible] = useState(false);
 
-	const handleGoPage = () => {
-		if (pathname === '/') window.scrollTo({ top: 0, behavior: 'smooth' });
-		if (pathname !== '/') router.push('/');
+	const handleGoPage = (page: string) => {
+		if (pathname === page) window.scrollTo({ top: 0, behavior: 'smooth' });
+		if (pathname !== page) router.push(page);
 	};
 
 	const handleScroll = () => {
@@ -54,7 +54,7 @@ export default function NavBar() {
 				</div>
 				<div className='flex gap-8 px-8 py-4 bg-background-light rounded-md'>
 					<div
-						onClick={handleGoPage}
+						onClick={() => handleGoPage('/')}
 						className='hover:text-default-text text-slate-600 font-semibold cursor-pointer transition-all'
 					>
 						Início
@@ -67,7 +67,11 @@ export default function NavBar() {
 						Contate-me
 					</Link>
 					<div className='w-px h-6 bg-slate-600' />
-					<Link className='hover:text-default-text text-slate-600 font-semibold transition-all' href={'/'}>
+					<Link
+						// onClick={() => handleGoPage('/anim')}
+						className='hover:text-default-text text-slate-600 font-semibold transition-all'
+						href={'/anim'}
+					>
 						Experiência
 					</Link>
 				</div>
