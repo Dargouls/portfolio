@@ -45,7 +45,7 @@ export default function NavBar() {
 		<>
 			<nav
 				style={{ backgroundColor: 'rgba(255, 255, 255, 0.001)' }}
-				className={`fixed left-1/2 backdrop-blur-xl -translate-x-1/2 bottom-2 gap-2 rounded-xl border p-2 border-slate-600 transition-all duration-200 hidden md:flex ${visible ? 'opacity-100' : 'opacity-0 translate-y-24'}`}
+				className={`fixed left-1/2 backdrop-blur-xl -translate-x-1/2 bottom-2 gap-2 rounded-xl border p-2 border-slate-600 z-infinity transition-all duration-200 hidden md:flex ${visible ? 'opacity-100' : 'opacity-0 translate-y-24'}`}
 			>
 				<div className='flex items-center justify-center px-8 min-w-24 bg-background-light rounded-md hover:opacity-60 active:bg-background'>
 					<Link href={'https://github.com/Dargouls'} target='_blank'>
@@ -62,7 +62,7 @@ export default function NavBar() {
 					<div className='w-px h-6 bg-slate-600' />
 					<Link
 						className='hover:text-default-text text-nowrap text-slate-600 font-semibold transition-all'
-						href={'/'}
+						href={'/contact-us'}
 					>
 						Contate-me
 					</Link>

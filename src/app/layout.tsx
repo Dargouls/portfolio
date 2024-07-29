@@ -1,6 +1,7 @@
 import AppBar from '@/components/layout/appbar/appbar';
 import Header from '@/components/layout/header/header';
 import NavBar from '@/components/layout/navbar/navbar';
+import SmoothScroll from '@/components/scrollsmooth/scrollsmooth';
 
 import type { Metadata } from 'next';
 import { Sen } from 'next/font/google';
@@ -25,7 +26,9 @@ export default function RootLayout({
 				className={`relative bg-background text-default-text max-w-[1950px] min-h-screen m-auto ${inter.className}`}
 			>
 				<Header />
-				<main className='h-full overflow-hidden'>{children}</main>
+				<main className='h-full overflow-hidden'>
+					<SmoothScroll>{children}</SmoothScroll>
+				</main>
 				<NavBar />
 				<AppBar />
 			</body>

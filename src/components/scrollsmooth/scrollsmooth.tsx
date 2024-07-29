@@ -1,6 +1,7 @@
 'use client';
 
 import useWindowSize from '@/hooks/useWindowSize';
+import { usePathname } from 'next/navigation';
 import { useEffect, useRef } from 'react';
 import './scrollsmooth.css';
 
@@ -9,6 +10,7 @@ interface SmoothScrollProps {
 }
 
 export default function SmoothScroll({ children }: SmoothScrollProps) {
+	const pathname = usePathname();
 	// 1. Hook para pegar o tamanho da janela
 	const windowSize = useWindowSize();
 
@@ -26,7 +28,7 @@ export default function SmoothScroll({ children }: SmoothScrollProps) {
 	// 4. Atualizar altura do corpo no resize
 	useEffect(() => {
 		setBodyHeight();
-	}, [windowSize.height]);
+	}, [windowSize.height, pathname]);
 
 	const setBodyHeight = () => {
 		if (scrollingContainerRef.current) {

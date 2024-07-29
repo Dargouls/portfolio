@@ -33,6 +33,7 @@ const config: Config = {
 				'default-text': 'var(--color-default-text)',
 				'default-text-strong': 'var(--color-default-text-strong)',
 				link: 'var(--color-link)',
+				placeholder: 'var(--color-placeholder)',
 			},
 			screens: {
 				xs: '350px',

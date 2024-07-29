@@ -9,7 +9,7 @@ export default function AppBar() {
 		<>
 			<nav
 				style={{ backgroundColor: 'rgba(0, 0, 0, 0.5)' }}
-				className={`fixed flex justify-around left-0 right-0 backdrop-blur-xl bottom-0 gap-2 border-t px-2 py-4 border-t-slate-600 transition-all duration-200 md:hidden`}
+				className={`fixed flex justify-around left-0 right-0 backdrop-blur-xl bottom-0 gap-2 border-t px-2 py-4 border-t-slate-600 z-infinity transition-all duration-200 md:hidden`}
 			>
 				<Link
 					className='flex flex-col items-center active:text-default-text text-slate-400 font-semibold transition-all'
