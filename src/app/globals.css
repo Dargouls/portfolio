@@ -40,7 +40,7 @@ html {
 }
 /*Scrollbar*/
 ::-webkit-scrollbar {
-	width: 8px;
+	width: 4px;
 }
 ::-webkit-scrollbar-track {
 	background: #00000000;

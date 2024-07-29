@@ -8,10 +8,6 @@ interface SmoothScrollProps {
 	children: React.ReactNode;
 }
 
-interface ScrollingContainerRef {
-	current: HTMLDivElement | null;
-}
-
 export default function SmoothScroll({ children }: SmoothScrollProps) {
 	// 1. Hook para pegar o tamanho da janela
 	const windowSize = useWindowSize();
@@ -55,7 +51,7 @@ export default function SmoothScroll({ children }: SmoothScrollProps) {
 	};
 
 	return (
-		<div className='parent'>
+		<div className='parent max-w-[1950px]'>
 			<div ref={scrollingContainerRef}>{children}</div>
 		</div>
 	);

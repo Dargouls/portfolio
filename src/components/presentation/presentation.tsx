@@ -66,7 +66,7 @@ function Pin() {
 				>
 					<Image src={whatsapp} alt='Whatsapp' height={24} width={24} />
 				</Link>
-				<Link href={'/'}>
+				<Link href={'mailto:gabriel.azevedo_dev@hotmail.com?subject=Olá%2C%20vim%20pelo%20seu%20portfólio!'}>
 					<Image src={google} alt='Google' height={24} width={24} />
 				</Link>
 			</div>

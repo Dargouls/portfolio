@@ -1,6 +1,6 @@
 import Image from 'next/image';
 
-import next from '@/assets/icons/logos_nextjs.png';
+import next from '@/assets/icons/logos_nextjs-light.png';
 import react from '@/assets/icons/logos_react.png';
 import typescript from '@/assets/icons/logos_typescript.png';
 

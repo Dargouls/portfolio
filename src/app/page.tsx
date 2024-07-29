@@ -11,7 +11,7 @@ import Technologies from '@/components/technologies/technologies';
 export default function Home() {
 	return (
 		<SmoothScroll>
-			<div className='relative '>
+			<div className='relative'>
 				<Presentation />
 				<Convencing />
 				<Projects className='mt-8 mb-94' />

@@ -25,7 +25,7 @@ export default function RootLayout({
 				className={`relative bg-background text-default-text max-w-[1950px] min-h-screen m-auto ${inter.className}`}
 			>
 				<Header />
-				<main>{children}</main>
+				<main className='h-full overflow-hidden'>{children}</main>
 				<NavBar />
 				<AppBar />
 			</body>

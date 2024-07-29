@@ -52,7 +52,7 @@ export default function NavBar() {
 						<Image src={github} alt='github' width={44} />
 					</Link>
 				</div>
-				<div className='flex gap-8 px-8 py-6 bg-background-light rounded-md'>
+				<div className='flex gap-8 px-8 py-4 bg-background-light rounded-md'>
 					<div
 						onClick={handleGoPage}
 						className='hover:text-default-text text-slate-600 font-semibold cursor-pointer transition-all'
