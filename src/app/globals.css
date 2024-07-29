@@ -51,7 +51,7 @@ html {
 	border-radius: 3px;
 }
 ::-webkit-scrollbar-thumb:hover {
-	background: #00000000;
+	background: #ffffff;
 }
 
 @layer utilities {
