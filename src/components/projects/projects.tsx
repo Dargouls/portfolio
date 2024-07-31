@@ -23,19 +23,19 @@ export default function Projects(props: HTMLAttributes<HTMLDivElement>) {
 						<ProjectCard
 							name='bookler'
 							description='Livraria com uma interface simples e de faça para que o usuário possa adicionar livros, edita-los e remover-os.'
-							url='https://bookler.vercel.app/'
+							url='/'
 							image={projectImg.src}
 						/>
 						<ProjectCard
 							name='bookler'
 							description='Livraria com uma interface simples e de faça para que o usuário possa adicionar livros, edita-los e remover-os.'
-							url='https://bookler.vercel.app/'
+							url='/'
 							image={projectImg.src}
 						/>
 						<ProjectCard
 							name='bookler'
 							description='Livraria com uma interface simples e de faça para que o usuário possa adicionar livros, edita-los e remover-os.'
-							url='https://bookler.vercel.app/'
+							url='/'
 							image={projectImg.src}
 						/>
 					</div>
