@@ -21,7 +21,7 @@ export default function AppBar() {
 				<div className='w-px h-6 bg-slate-600' />
 				<Link
 					className='flex flex-col items-center active:text-default-text text-slate-400 font-semibold transition-all'
-					href={'/'}
+					href={'/contact-us'}
 				>
 					<MessageSquareMore size={20} />
 					<span className='hidden xs:block'>Contate-me</span>

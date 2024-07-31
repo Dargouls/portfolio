@@ -19,9 +19,9 @@ export default function ContactUs() {
 
 	return (
 		<>
-			<div className='min-h-screen flex justify-center items-center bg-background-light'>
+			<div className='min-h-screen flex justify-center items-center p-4 bg-background-light'>
 				<form
-					className=' bg-background flex flex-col items-center rounded-2xl shadow-grand gap-8 p-4 z-10'
+					className='bg-background flex flex-col items-center rounded-2xl shadow-grand gap-8 p-4 z-10'
 					onSubmit={handleSubmit(onSubmit)}
 					autoComplete='off'
 				>
