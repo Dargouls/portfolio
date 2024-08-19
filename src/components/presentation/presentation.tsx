@@ -1,7 +1,7 @@
 import google from '@/assets/icons/logos_google-gmail.svg';
 import linkedin from '@/assets/icons/logos_linkedin-icon.svg';
 import whatsapp from '@/assets/icons/logos_whatsapp-icon.svg';
-import me from '@/assets/images/me.png';
+import me from '@/assets/images/me-professional.png';
 
 import Image from 'next/image';
 import Link from 'next/link';
@@ -12,14 +12,14 @@ export default function Presentation() {
 	return (
 		<>
 			<section
-				className={`flex flex-col w-full md:h-screen max-h-[1000px] px-4 text-center relative justify-center items-center h-[calc(100vh-136px)]`}
+				className={`relative flex h-[calc(100vh-136px)] max-h-[1000px] w-full flex-col items-center justify-center px-4 text-center md:h-screen`}
 			>
-				<div id='image-container' className='w-32 h-32'>
+				<div id='image-container' className='h-32 w-32'>
 					<Image
 						data-aos='fade-up'
 						data-aos-duration='900'
 						data-aos-delay='300'
-						className='shadow-grand rounded-full'
+						className='rounded-full shadow-grand'
 						src={me}
 						alt='Me'
 						height={720}
@@ -40,7 +40,7 @@ export default function Presentation() {
 				</span>
 
 				<div
-					className='flex justify-center absolute bottom-16 w-full h-20'
+					className='absolute bottom-16 flex h-20 w-full justify-center'
 					data-aos='fade-up'
 					data-aos-duration='1000'
 					data-aos-delay='1000'
@@ -56,7 +56,7 @@ export default function Presentation() {
 function Pin() {
 	return (
 		<>
-			<div className='flex absolute bottom-0 gap-4 items-center justify-center bg-contrast py-1 px-6 rounded-full hover:px-10 hover:gap-6 transition-all duration-300 ease-bounce'>
+			<div className='absolute bottom-0 flex items-center justify-center gap-4 rounded-full bg-contrast px-6 py-1 transition-all duration-300 ease-bounce hover:gap-6 hover:px-10'>
 				<Link href={'https://www.linkedin.com/in/gabriel-azevedo-b72b27191/'} target='_blank'>
 					<Image src={linkedin} alt='Linkedin' height={24} width={24} />
 				</Link>
