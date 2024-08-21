@@ -18,6 +18,9 @@ export default function ContactUs() {
 	const { watch, register, handleSubmit } = useForm();
 	const [sending, setSending] = useState(false);
 
+	const handleDebug = () => {
+		console.log('name', watch('message'));
+	};
 	const onSubmit: SubmitHandler<FieldValues> = (data) => {
 		setSending(true);
 		fetch('/api/send-email', {
@@ -29,18 +32,22 @@ export default function ContactUs() {
 				to: 'gabriel.azevedo_dev@hotmail.com',
 				from: 'gabriel.azevedo_dev@hotmail.com',
 				subject: 'Contato pelo site',
-				text: watch('message'),
+				name: watch('name'),
+				phone: watch('phone'),
+				email: watch('email'),
+				message: watch('message'),
 				template: renderToString(
 					<Email
 						name={watch('name')}
-						phone={watch('number')}
+						phone={watch('phone')}
 						email={watch('email')}
 						message={watch('message')}
 					/>
 				),
 			}),
 		})
-			.then(() => {
+			.then((e) => {
+				console.log(e);
 				toast.success('E-mail enviado com sucesso!');
 				setSending(false);
 			})
@@ -59,7 +66,6 @@ export default function ContactUs() {
 					autoComplete='off'
 				>
 					<Image src={logo} alt='logo' width={64} />
-
 					<div className='flex w-full flex-col gap-4'>
 						<div className='flex gap-4'>
 							<FormGroup>
@@ -70,7 +76,7 @@ export default function ContactUs() {
 								<label htmlFor='number'>Número</label>
 								<TextField
 									type='tel'
-									register={register('number')}
+									register={register('phone')}
 									placeholder='(12) 91122 9099'
 									id='number'
 									mask='(99) 99999-9999'

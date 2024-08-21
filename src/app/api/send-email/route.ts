@@ -2,10 +2,14 @@ import { NextRequest, NextResponse } from 'next/server';
 import nodemailer from 'nodemailer';
 
 export async function POST(request: NextRequest) {
-	const { from, to, subject, text, phone, name, email, template } = await request.json();
+	const { from, to, subject, phone, name, email, template, message } = await request.json();
 
-	if (!from || !to || !subject || !text) {
-		return NextResponse.json({ error: 'Missing required fields' }, { status: 400 });
+	console.log(name, phone, email, message);
+	if (!from || !to || !subject || !template || !phone || !name || !message || !email) {
+		return NextResponse.json(
+			{ error: 'Missing required fields', message: 'Missing required fields' },
+			{ status: 400 }
+		);
 	}
 	// Configuração do transporte do nodemailer
 	const transporter = nodemailer.createTransport({
