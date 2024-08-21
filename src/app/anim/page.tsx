@@ -1,6 +1,7 @@
 'use client';
 
-import '@/components/newSmoothScroll/locomotive-scroll.css';
+import '@/components/locomotiveScroll/locomotive-scroll.css';
+
 import { useEffect } from 'react';
 
 export default function Anim() {
@@ -14,12 +15,12 @@ export default function Anim() {
 	}, []);
 
 	return (
-		<div className='flex flex-col justify-center items-center gap-4'>
+		<div className='flex flex-col items-center justify-center gap-4'>
 			<h1 className='absolute'>Anim</h1>
-			<div className='w-screen h-screen bg-slate-600'></div>
-			<div className='w-screen h-screen bg-slate-600'></div>
-			<div className='w-screen h-screen bg-slate-600'></div>
-			<div className='w-screen h-screen bg-slate-600'></div>
+			<div className='h-screen w-screen bg-slate-600'></div>
+			<div className='h-screen w-screen bg-slate-600'></div>
+			<div className='h-screen w-screen bg-slate-600'></div>
+			<div className='h-screen w-screen bg-slate-600'></div>
 		</div>
 	);
 }
