@@ -55,8 +55,8 @@ const config: Config = {
 			addBase({
 				h1: { fontSize: '2.936rem', fontWeight: theme('fontWeight.semibold') },
 				h2: { fontSize: '2.243rem', fontWeight: theme('fontWeight.semibold') },
-				h3: { fontSize: '1.1713rem', fontWeight: theme('fontWeight.semibold') },
-				h4: { fontSize: '1.309rem', fontWeight: theme('fontWeight.semibold') },
+				h3: { fontSize: '1.309rem', fontWeight: theme('fontWeight.semibold') },
+				h4: { fontSize: '1.1713rem', fontWeight: theme('fontWeight.semibold') },
 			});
 		}),
 		function ({ addVariant }: any) {

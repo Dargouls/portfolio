@@ -5,7 +5,7 @@ import Link from 'next/link';
 export default function Footer() {
 	return (
 		<>
-			<footer className='mt-64'>
+			<footer className='mt-4'>
 				<svg className='' viewBox='0 0 1440 100' version='1.1' xmlns='http://www.w3.org/2000/svg'>
 					<path
 						fill='#20232D'
@@ -14,46 +14,46 @@ export default function Footer() {
 				</svg>
 
 				<div id='footer-content' className='flex flex-col gap-10 bg-background-light'>
-					<div className='flex flex-wrap gap-10 w-full justify-evenly items-center'>
+					<div className='flex w-full flex-wrap items-center justify-evenly gap-10'>
 						<Image src={logo} alt='logo' />
 
-						<div className='flex flex-wrap gap-4 justify-center md:justify-start'>
+						<div className='flex flex-wrap justify-center gap-4 md:justify-start'>
 							<section className='flex flex-col gap-4 p-8'>
 								<h3>Serviços</h3>
 
-								<Link className='underline text-default-text-strong hover:text-default-text' href='/'>
+								<Link className='text-default-text-strong underline hover:text-default-text' href='/'>
 									Dashboards
 								</Link>
-								<Link className='underline text-default-text-strong hover:text-default-text' href='/'>
+								<Link className='text-default-text-strong underline hover:text-default-text' href='/'>
 									Landing Pages
 								</Link>
-								<Link className='underline text-default-text-strong hover:text-default-text' href='/'>
+								<Link className='text-default-text-strong underline hover:text-default-text' href='/'>
 									Sistemas
 								</Link>
 							</section>
 							<section className='flex flex-col gap-4 p-8'>
 								<h3>Services</h3>
 
-								<Link className='underline text-default-text-strong hover:text-default-text' href='/'>
+								<Link className='text-default-text-strong underline hover:text-default-text' href='/'>
 									Dashboards
 								</Link>
-								<Link className='underline text-default-text-strong hover:text-default-text' href='/'>
+								<Link className='text-default-text-strong underline hover:text-default-text' href='/'>
 									Landing Pages
 								</Link>
-								<Link className='underline text-default-text-strong hover:text-default-text' href='/'>
+								<Link className='text-default-text-strong underline hover:text-default-text' href='/'>
 									Sistemas
 								</Link>
 							</section>
 							<section className='flex flex-col gap-4 p-8'>
 								<h3>Services</h3>
 
-								<Link className='underline text-default-text-strong hover:text-default-text' href='/'>
+								<Link className='text-default-text-strong underline hover:text-default-text' href='/'>
 									Dashboards
 								</Link>
-								<Link className='underline text-default-text-strong hover:text-default-text' href='/'>
+								<Link className='text-default-text-strong underline hover:text-default-text' href='/'>
 									Landing Pages
 								</Link>
-								<Link className='underline text-default-text-strong hover:text-default-text' href='/'>
+								<Link className='text-default-text-strong underline hover:text-default-text' href='/'>
 									Sistemas
 								</Link>
 							</section>

@@ -44,34 +44,26 @@ export default function NavBar() {
 		<>
 			<nav
 				style={{ backgroundColor: 'rgba(255, 255, 255, 0.001)' }}
-				className={`fixed left-1/2 backdrop-blur-xl -translate-x-1/2 bottom-2 gap-2 rounded-xl border p-2 shadow-grand border-slate-600 z-infinity transition-all duration-200 hidden md:flex ${visible ? 'opacity-100' : 'opacity-0 translate-y-24'}`}
+				className={`fixed bottom-2 left-1/2 z-infinity hidden -translate-x-1/2 gap-2 rounded-xl border border-slate-600 p-2 shadow-grand backdrop-blur-xl transition-all duration-200 md:flex ${visible ? 'opacity-100' : 'translate-y-24 opacity-0'}`}
 			>
-				<div className='flex items-center justify-center px-8 min-w-24 bg-background-light rounded-md hover:opacity-60 active:bg-background'>
+				<div className='flex min-w-24 items-center justify-center rounded-md bg-background-light px-8 hover:opacity-60 active:bg-background'>
 					<Link href={'https://github.com/Dargouls'} target='_blank'>
 						<Image src={github} alt='github' width={44} />
 					</Link>
 				</div>
-				<div className='flex gap-8 px-8 py-4 bg-background-light rounded-md'>
+				<div className='flex gap-8 rounded-md bg-background-light px-8 py-4'>
 					<div
 						onClick={() => handleGoPage('/')}
-						className='hover:text-default-text text-slate-600 font-semibold cursor-pointer transition-all'
+						className='cursor-pointer font-semibold text-slate-600 transition-all hover:text-default-text'
 					>
 						Início
 					</div>
-					<div className='w-px h-6 bg-slate-600' />
+					<div className='h-6 w-px bg-slate-600' />
 					<Link
-						className='hover:text-default-text text-nowrap text-slate-600 font-semibold transition-all'
+						className='text-nowrap font-semibold text-slate-600 transition-all hover:text-default-text'
 						href={'/contact-us'}
 					>
 						Contate-me
-					</Link>
-					<div className='w-px h-6 bg-slate-600' />
-					<Link
-						// onClick={() => handleGoPage('/anim')}
-						className='hover:text-default-text text-slate-600 font-semibold transition-all'
-						href={'/anim'}
-					>
-						Experiência
 					</Link>
 				</div>
 			</nav>

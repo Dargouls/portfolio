@@ -7,27 +7,60 @@ import Image from 'next/image';
 
 import logo from '@/assets/brand/logo.svg';
 import Button from '@/components/button/button';
+import Email from '@/components/email/email';
 import FormGroup from '@/components/formGroup/formGroup';
 import Textarea from '@/components/textarea/textarea';
+import { useState } from 'react';
+import { renderToString } from 'react-dom/server';
+import toast from 'react-hot-toast';
 
 export default function ContactUs() {
 	const { watch, register, handleSubmit } = useForm();
+	const [sending, setSending] = useState(false);
 
 	const onSubmit: SubmitHandler<FieldValues> = (data) => {
-		console.log('submitted', watch());
+		setSending(true);
+		fetch('/api/send-email', {
+			method: 'POST',
+			headers: {
+				'Content-Type': 'application/json',
+			},
+			body: JSON.stringify({
+				to: 'gabriel.azevedo_dev@hotmail.com',
+				from: 'gabriel.azevedo_dev@hotmail.com',
+				subject: 'Contato pelo site',
+				text: watch('message'),
+				template: renderToString(
+					<Email
+						name={watch('name')}
+						phone={watch('number')}
+						email={watch('email')}
+						message={watch('message')}
+					/>
+				),
+			}),
+		})
+			.then(() => {
+				toast.success('E-mail enviado com sucesso!');
+				setSending(false);
+			})
+			.catch(() => {
+				toast.error('Erro ao enviar e-mail');
+				setSending(false);
+			});
 	};
 
 	return (
 		<>
-			<div className='min-h-screen flex justify-center items-center p-4 bg-background-light'>
+			<div className='flex min-h-screen items-center justify-center bg-background-light p-4'>
 				<form
-					className='bg-background flex flex-col items-center rounded-2xl shadow-grand gap-8 p-4 z-10'
+					className='z-10 flex flex-col items-center gap-8 rounded-2xl bg-background p-4 shadow-grand'
 					onSubmit={handleSubmit(onSubmit)}
 					autoComplete='off'
 				>
 					<Image src={logo} alt='logo' width={64} />
 
-					<div className='flex flex-col w-full gap-4'>
+					<div className='flex w-full flex-col gap-4'>
 						<div className='flex gap-4'>
 							<FormGroup>
 								<label htmlFor='name'>Name</label>
@@ -40,6 +73,7 @@ export default function ContactUs() {
 									register={register('number')}
 									placeholder='(12) 91122 9099'
 									id='number'
+									mask='(99) 99999-9999'
 								/>
 							</FormGroup>
 						</div>
@@ -58,7 +92,9 @@ export default function ContactUs() {
 							<Textarea register={register('message')} id='message' placeholder='Escreva sua mensagem' />
 						</FormGroup>
 
-						<Button className='bg-contrast text-background'>Contate-me</Button>
+						<Button className='bg-contrast text-background' loading={sending}>
+							Contate-me
+						</Button>
 					</div>
 				</form>
 			</div>
