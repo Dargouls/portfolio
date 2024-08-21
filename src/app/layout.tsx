@@ -15,7 +15,7 @@ import './globals.css';
 const inter = Sen({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
-	title: 'Portfólio - Gabriel Azevedo | Desenvolvedor web',
+	title: 'Gabriel Azevedo - Portfólio',
 	description: 'Desenvolvedor web front-end. Trabalho principalmente com o ecosistema react.js',
 };
 
