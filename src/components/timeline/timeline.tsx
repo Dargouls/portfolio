@@ -79,7 +79,7 @@ export const Timeline = () => {
 					className='vertical-timeline-element--work'
 					contentStyle={{ background: companyColor, color: '#fff' }}
 					contentArrowStyle={{ borderRight: `7px solid ${companyColor}` }}
-					date='08/2022 - 07/2023'
+					date='08/2023 - 07/2024'
 					iconStyle={{ background: companyColor, color: '#fff' }}
 					icon={<ChevronDown />}
 				>
@@ -104,6 +104,7 @@ export const Timeline = () => {
 						<Technology>ApexCharts</Technology>
 						<Technology>NodeJs</Technology>
 						<Technology>Postgres</Technology>
+						<Technology>Genexus</Technology>
 					</div>
 				</VerticalTimelineElement>
 				<VerticalTimelineElement

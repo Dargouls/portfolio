@@ -10,18 +10,27 @@ import Button from '@/components/button/button';
 import Email from '@/components/email/email';
 import FormGroup from '@/components/formGroup/formGroup';
 import Textarea from '@/components/textarea/textarea';
+import { zodResolver } from '@hookform/resolvers/zod';
 import { useState } from 'react';
 import { renderToString } from 'react-dom/server';
 import toast from 'react-hot-toast';
+import { z } from 'zod';
+
+const validateFields = z.object({
+	name: z.string().min(3, { message: 'O nome deve conter pelo menos 3 caracteres' }),
+	phone: z.string().min(10, { message: 'O telefone deve conter pelo menos 10 caracteres' }),
+	email: z.string().email(),
+	message: z.string().min(10, { message: 'Escreva uma mensagem :D' }),
+});
+type FormData = z.infer<typeof validateFields>;
 
 export default function ContactUs() {
-	const { watch, register, handleSubmit } = useForm();
 	const [sending, setSending] = useState(false);
+	const { watch, register, handleSubmit } = useForm<FormData>({
+		resolver: zodResolver(validateFields),
+	});
 
-	const handleDebug = () => {
-		console.log('name', watch('message'));
-	};
-	const onSubmit: SubmitHandler<FieldValues> = (data) => {
+	const onSubmit: SubmitHandler<FieldValues> = () => {
 		setSending(true);
 		fetch('/api/send-email', {
 			method: 'POST',
@@ -46,8 +55,7 @@ export default function ContactUs() {
 				),
 			}),
 		})
-			.then((e) => {
-				console.log(e);
+			.then(() => {
 				toast.success('E-mail enviado com sucesso!');
 				setSending(false);
 			})

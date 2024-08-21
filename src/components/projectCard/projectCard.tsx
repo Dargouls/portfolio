@@ -5,7 +5,7 @@ import Link from 'next/link';
 interface ProjectCardProps {
 	name: string;
 	description: string;
-	url: string;
+	url?: string;
 	image: string;
 }
 
@@ -13,27 +13,25 @@ export default function ProjectCard({ name, description, url, image }: ProjectCa
 	return (
 		<>
 			<Link
-				href={url}
+				href={url || '/'}
 				target='_blank'
-				className='group flex flex-col gap-4 md:max-w-[300px] w-full bg-background-light border border-contrast rounded-xl overflow-hidden cursor-pointer'
+				className='group flex w-full cursor-pointer flex-col gap-4 overflow-hidden rounded-xl border border-contrast bg-background-light md:max-w-[300px]'
 			>
 				<div id='image-container' className='w-full overflow-hidden'>
 					<Image
-						className='group-hover:scale-110 group-active:scale-100 w-full h-40 brightness-50 blur-[2px] group-hover:blur-0 group-hover:brightness-100 transition-all duration-700'
+						className='h-40 w-full blur-[2px] brightness-50 transition-all duration-700 group-hover:scale-110 group-hover:blur-0 group-hover:brightness-100 group-active:scale-100'
 						src={image}
 						alt={name}
 						height={200}
 						width={200}
 					/>
 				</div>
-				<div className='flex justify-between px-2 pb-2'>
-					<div>
-						<h3 className='flex justify-between'>
-							{name}
-							<SquareArrowOutUpRight size={20} />
-						</h3>
-						<p className='text-slate-400'>{description}</p>
-					</div>
+				<div className='flex w-full flex-col justify-between px-2 pb-4'>
+					<h3 className='flex w-full justify-between'>
+						{name}
+						{url && <SquareArrowOutUpRight size={20} />}
+					</h3>
+					<p className='text-slate-400'>{description}</p>
 				</div>
 			</Link>
 		</>

@@ -35,8 +35,7 @@ export default function Presentation() {
 					data-aos-delay='300'
 					className='max-w-[900px] text-center text-default-text-strong'
 				>
-					Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
-					et dolore magna aliqua minim veniam, quis nostrud.
+					Na área da programação há 3 anos atuando como desenvolvedor fullstack, mas focado no front-end.
 				</span>
 
 				<div
