@@ -17,7 +17,7 @@ export default function Projects(props: HTMLAttributes<HTMLDivElement>) {
 						<ProjectCard
 							name='Count plus'
 							description='Contador de horas de atividades e mesclá-las em uma atividade maior.'
-							url='https:/count-plus.vercel.app/'
+							url='https://count-plus.vercel.app/'
 							image={countplus.src}
 						/>
 						<ProjectCard
