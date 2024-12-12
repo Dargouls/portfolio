@@ -3,8 +3,8 @@ import { HTMLAttributes } from 'react';
 import { twMerge } from 'tailwind-merge';
 import ProjectCard from '../projectCard/projectCard';
 
+import chatLlama from '@/assets/images/chat-llama.png';
 import countplus from '@/assets/images/count-plus.png';
-import projectImg from '@/assets/images/developing.png';
 
 export default function Projects(props: HTMLAttributes<HTMLDivElement>) {
 	return (
@@ -15,20 +15,16 @@ export default function Projects(props: HTMLAttributes<HTMLDivElement>) {
 				<div className='m-auto flex flex-wrap gap-4'>
 					<div className='m-auto flex flex-wrap gap-4'>
 						<ProjectCard
-							name='Count plus'
-							description='Contador de horas de atividades e mesclá-las em uma atividade maior.'
+							name='Timer de tarefas'
+							description='Gerenciador rápido de tempo em tarefas'
 							url='https://count-plus.vercel.app/'
 							image={countplus.src}
 						/>
 						<ProjectCard
-							name='Em desenvolvimento...'
-							description='Detenha a contagem, tenho que fazer uns ajustes!'
-							image={projectImg.src}
-						/>
-						<ProjectCard
-							name='Em desenvolvimento...'
-							description='Detenha a contagem, tenho que fazer uns ajustes!'
-							image={projectImg.src}
+							name='Chat Llama'
+							description='Chat bot com inteligência artificial usando a nova Llama 3'
+							url='https://chatbot-llama-plum.vercel.app'
+							image={chatLlama.src}
 						/>
 					</div>
 				</div>
