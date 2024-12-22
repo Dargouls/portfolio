@@ -5,6 +5,7 @@ import ProjectCard from '../projectCard/projectCard';
 
 import chatLlama from '@/assets/images/chat-llama.png';
 import countplus from '@/assets/images/count-plus.png';
+import iris from '@/assets/images/iris-analyzer.jpeg';
 
 export default function Projects(props: HTMLAttributes<HTMLDivElement>) {
 	return (
@@ -25,6 +26,12 @@ export default function Projects(props: HTMLAttributes<HTMLDivElement>) {
 							description='Chat bot com inteligência artificial usando a nova Llama 3'
 							url='https://chatbot-llama-plum.vercel.app'
 							image={chatLlama.src}
+						/>
+						<ProjectCard
+							name='Analizador ocular'
+							description='Analizador e gerador de laudos oculares com inteligência artificial'
+							url='https://iris-next-ten.vercel.app'
+							image={iris.src}
 						/>
 					</div>
 				</div>
