@@ -22,15 +22,21 @@ export default function Projects(props: HTMLAttributes<HTMLDivElement>) {
 							image={countplus.src}
 						/>
 						<ProjectCard
-							name='Chat Llama'
-							description='Chat bot com inteligência artificial usando a nova Llama 3'
-							url='https://chatbot-llama-plum.vercel.app'
+							name='Superminichat'
+							description='Chat bot com inteligência artificial baseado em Gemini'
+							url='https://superminichat.vercel.app'
 							image={chatLlama.src}
 						/>
 						<ProjectCard
 							name='Analizador ocular'
 							description='Analizador e gerador de laudos oculares com inteligência artificial'
 							url='https://iris-next-ten.vercel.app'
+							image={iris.src}
+						/>
+						<ProjectCard
+							name='Guerreiros Naventura'
+							description='Institucional para a organização Guerreiros Naventura / Corrida e Trekking'
+							url='https://www.orientextreme.com.br/'
 							image={iris.src}
 						/>
 					</div>
