@@ -1,7 +1,7 @@
 import google from '@/assets/icons/logos_google-gmail.svg';
 import linkedin from '@/assets/icons/logos_linkedin-icon.svg';
 import whatsapp from '@/assets/icons/logos_whatsapp-icon.svg';
-import me from '@/assets/images/me-professional.png';
+import me from '@/assets/images/me.png';
 
 import Image from 'next/image';
 import Link from 'next/link';

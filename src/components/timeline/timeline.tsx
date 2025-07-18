@@ -1,4 +1,5 @@
 import { ChevronDown, Star } from 'lucide-react';
+import Link from 'next/link';
 import { rgba } from 'polished';
 import { VerticalTimeline, VerticalTimelineElement } from 'react-vertical-timeline-component';
 import 'react-vertical-timeline-component/style.min.css';
@@ -22,7 +23,7 @@ export const Timeline = () => {
 					iconStyle={{ background: traineeColor, color: '#fff' }}
 					icon={<ChevronDown />}
 				>
-					<Badge className='bg-zinc-300 shadow-minor' style={{ color: traineeColor }}>
+					<Badge className='bg-zinc-100 shadow-minor' style={{ color: traineeColor }}>
 						Zenix tech
 					</Badge>
 					<h3 className='vertical-timeline-element-title'>UI/UX Designer</h3>
@@ -48,11 +49,11 @@ export const Timeline = () => {
 					iconStyle={{ background: traineeColor, color: '#fff' }}
 					icon={<ChevronDown />}
 				>
-					<Badge className='bg-zinc-300 shadow-minor' style={{ color: traineeColor }}>
+					<Badge className='bg-zinc-100 shadow-minor' style={{ color: traineeColor }}>
 						Prefeitura de Maceió
 					</Badge>
 					<h3 className='vertical-timeline-element-title'>Desenvolvedor fullstack</h3>
-					<h4 className='vertical-timeline-element-subtitle opacity-60'>Estágio remoto</h4>
+					<h4 className='vertical-timeline-element-subtitle opacity-60'>Remoto</h4>
 					<p>
 						Aqui foi onde houve minha maior evolução individual. Além de masterizar o que já tinha aprendido,
 						encontrei diversas situações que me desafiaram bastante. Tive uma equipe extremamente reduzida,
@@ -77,22 +78,22 @@ export const Timeline = () => {
 				<VerticalTimelineElement
 					visible
 					className='vertical-timeline-element--work'
-					contentStyle={{ background: companyColor, color: '#fff' }}
-					contentArrowStyle={{ borderRight: `7px solid ${companyColor}` }}
+					contentStyle={{ background: traineeColor, color: '#fff' }}
+					contentArrowStyle={{ borderRight: `7px solid ${traineeColor}` }}
 					date='08/2023 - 07/2024'
-					iconStyle={{ background: companyColor, color: '#fff' }}
+					iconStyle={{ background: traineeColor, color: '#fff' }}
 					icon={<ChevronDown />}
 				>
-					<Badge className='bg-zinc-300 shadow-minor' style={{ color: companyColor }}>
+					<Badge className='bg-zinc-100 shadow-minor' style={{ color: traineeColor }}>
 						SAS.SGP
 					</Badge>
 					<h3 className='vertical-timeline-element-title'>Desenvolvedor fullstack</h3>
 					<h4 className='vertical-timeline-element-subtitle opacity-60'>Efetivo híbrido</h4>
 					<p>
-						Pela primeira vez tive a experiência de me envolver em uma equipe maior com foco total no
-						desenvolvimento ágil, onde tive um salto no crescimento social e capacidade de resolução de
-						problemas. Desenvolvi e participei de diversos projetos internos, B.I, e projetos para clientes,
-						com foco total na entrega de valor com qualidade.
+						Tive a experiência de me envolver em uma equipe multidisciplinar com foco total no desenvolvimento
+						ágil, onde tive um salto no crescimento social e capacidade de resolução de problemas. Desenvolvi
+						e participei de diversos projetos internos, B.I, e projetos para clientes, com foco total na
+						entrega de valor com qualidade.
 					</p>
 					<div className='mt-2 flex flex-wrap gap-2'>
 						<Technology>Figma</Technology>
@@ -107,11 +108,41 @@ export const Timeline = () => {
 						<Technology>Genexus</Technology>
 					</div>
 				</VerticalTimelineElement>
+
 				<VerticalTimelineElement
+					visible
+					className='vertical-timeline-element--work'
+					contentStyle={{ background: companyColor, color: '#fff' }}
+					contentArrowStyle={{ borderRight: `7px solid ${companyColor}` }}
+					date='07/2025 - atual'
+					iconStyle={{ background: companyColor, color: '#fff' }}
+					icon={<Star fill='#fff' color='#fff' />}
+				>
+					<Badge className='bg-zinc-100 shadow-minor' style={{ color: companyColor }}>
+						Qbem
+					</Badge>
+					<h3 className='vertical-timeline-element-title'>Desenvolvedor front-end</h3>
+					<h4 className='vertical-timeline-element-subtitle opacity-60'>Efetivo Remoto</h4>
+					<p>
+						Link:{' '}
+						<Link href='https://www.qbem.net.br' target='_blank'>
+							qbem.com.br
+						</Link>
+					</p>
+					<div className='mt-2 flex flex-wrap gap-2'>
+						<Technology>ReactJs</Technology>
+						<Technology>Typescript</Technology>
+						<Technology>Tailwindcss</Technology>
+						<Technology>Styled Components</Technology>
+						<Technology>Echarts</Technology>
+					</div>
+				</VerticalTimelineElement>
+
+				{/* <VerticalTimelineElement
 					visible
 					iconStyle={{ background: '#5b2fa1', color: '#fff' }}
 					icon={<Star fill='#fff' color='#fff' />}
-				/>
+				/> */}
 			</VerticalTimeline>
 		</div>
 	);

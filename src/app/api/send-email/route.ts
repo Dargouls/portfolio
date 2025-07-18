@@ -13,6 +13,7 @@ export async function POST(request: NextRequest) {
 	}
 	// Configuração do transporte do nodemailer
 	const transporter = nodemailer.createTransport({
+		service: 'outlook',
 		host: process.env.SMTP_HOST,
 		port: Number(process.env.SMTP_PORT),
 		secure: false, // Use SSL/TLS para o Gmail
