@@ -9,7 +9,7 @@
     "superminichat": {
       "routing": [
         {
-          "paths": ["/chat-ai", "/chat-ai/:path*"]
+          "paths": ["/superminichat", "/superminichat/:path*"]
         }
       ]
     }
