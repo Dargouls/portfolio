@@ -20,31 +20,35 @@ export default function Projects(props: HTMLAttributes<HTMLDivElement>) {
 						<ProjectCard
 							name='Timer de tarefas'
 							description='Gerenciador rápido de tempo em tarefas'
-							url='https://count-plus.vercel.app/'
+							href='https://count-plus.vercel.app/'
+							target='_blank'
 							image={countplus.src}
 						/>
 						<ProjectCard
 							name='Superminichat'
 							description='Chat bot com inteligência artificial baseado em Gemini'
-							url='https://superminichat.vercel.app'
+							href='/superminichat' // Conectado ao microfrontend na infra
 							image={chatLlama.src}
 						/>
 						<ProjectCard
 							name='Analizador ocular'
 							description='Analizador e gerador de laudos oculares com inteligência artificial'
-							url='https://iris-next-ten.vercel.app'
+							href='https://iris-next-ten.vercel.app'
+							target='_blank'
 							image={iris.src}
 						/>
 						<ProjectCard
 							name='Guerreiros Naventura'
 							description='Institucional para a organização Guerreiros Naventura / Corrida e Trekking'
-							url='https://www.orientextreme.com.br/'
+							href='https://www.orientextreme.com.br/'
+							target='_blank'
 							image={guerreiros.src}
 						/>
 						<ProjectCard
 							name='artIux Lab'
 							description='Biblioteca código aberto de componentes focada em animações e efeitos visuais'
-							url='https://artiux.vercel.app/'
+							href='https://artiux.vercel.app/'
+							target='_blank'
 							image={artiux.src}
 						/>
 					</div>

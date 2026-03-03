@@ -1,20 +1,20 @@
 import { SquareArrowOutUpRight } from 'lucide-react';
 import Image from 'next/image';
-import Link from 'next/link';
+import NextLink, { LinkProps as LinkPropsBase } from 'next/link';
+import { AnchorHTMLAttributes } from 'react';
 
-interface ProjectCardProps {
+interface ProjectCardProps extends Omit<AnchorHTMLAttributes<HTMLAnchorElement>, keyof LinkPropsBase>, LinkPropsBase {
 	name: string;
 	description: string;
 	url?: string;
 	image: string;
 }
 
-export default function ProjectCard({ name, description, url, image }: ProjectCardProps) {
+export default function ProjectCard({ name, description, url, image, ...props }: ProjectCardProps) {
 	return (
 		<>
-			<Link
-				href={url || '/'}
-				target='_blank'
+			<NextLink
+				{...props}
 				className='group flex w-full cursor-pointer flex-col gap-4 overflow-hidden rounded-xl border border-contrast bg-background-light md:max-w-[300px]'
 			>
 				<div id='image-container' className='w-full overflow-hidden'>
@@ -29,11 +29,11 @@ export default function ProjectCard({ name, description, url, image }: ProjectCa
 				<div className='flex w-full flex-col justify-between px-2 pb-4'>
 					<h3 className='flex w-full justify-between'>
 						{name}
-						{url && <SquareArrowOutUpRight size={20} />}
+						{props.target && <SquareArrowOutUpRight size={20} />}
 					</h3>
 					<p className='text-slate-400'>{description}</p>
 				</div>
-			</Link>
+			</NextLink>
 		</>
 	);
 }
