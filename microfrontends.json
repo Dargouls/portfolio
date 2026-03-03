@@ -1,0 +1,17 @@
+{
+  "$schema": "https://openapi.vercel.sh/microfrontends.json",
+  "applications": {
+    "portfolio": {
+      "development": {
+        "fallback": "www.gabrielzv.com"
+      }
+    },
+    "superminichat": {
+      "routing": [
+        {
+          "paths": [/* add paths here */]
+        }
+      ]
+    }
+  }
+}
