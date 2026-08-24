@@ -44,25 +44,22 @@ export default function NavBar() {
 		<>
 			<nav
 				style={{ backgroundColor: 'rgba(255, 255, 255, 0.001)' }}
-				className={`fixed bottom-2 left-1/2 z-infinity hidden -translate-x-1/2 gap-2 rounded-xl border border-slate-600 p-2 shadow-grand backdrop-blur-xl transition-all duration-200 md:flex ${visible ? 'opacity-100' : 'translate-y-24 opacity-0'}`}
+				className={`z-infinity shadow-grand fixed bottom-2 left-1/2 hidden -translate-x-1/2 gap-2 rounded-xl border border-slate-600 p-2 backdrop-blur-xl transition-all duration-200 md:flex ${visible ? 'opacity-100' : 'translate-y-24 opacity-0'}`}
 			>
-				<div className='flex min-w-24 items-center justify-center rounded-md bg-background-light px-8 hover:opacity-60 active:bg-background'>
-					<Link href={'https://github.com/Dargouls'} target='_blank'>
+				<div className='bg-background-light active:bg-background flex min-w-24 items-center justify-center rounded-md px-8 hover:opacity-60'>
+					<Link href={'https://github.com/gabrielzv11'} target='_blank'>
 						<Image src={github} alt='github' width={44} />
 					</Link>
 				</div>
-				<div className='flex gap-8 rounded-md bg-background-light px-8 py-4'>
+				<div className='bg-background-light flex gap-8 rounded-md px-8 py-4'>
 					<div
 						onClick={() => handleGoPage('/')}
-						className='cursor-pointer font-semibold text-slate-600 transition-all hover:text-default-text'
+						className='hover:text-default-text cursor-pointer font-semibold text-slate-600 transition-all'
 					>
 						Início
 					</div>
 					<div className='h-6 w-px bg-slate-600' />
-					<Link
-						className='text-nowrap font-semibold text-slate-600 transition-all hover:text-default-text'
-						href={'/contact-us'}
-					>
+					<Link className='hover:text-default-text font-semibold text-nowrap text-slate-600 transition-all' href={'/contact-us'}>
 						Contate-me
 					</Link>
 				</div>
