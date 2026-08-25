@@ -45,9 +45,9 @@ export default function Projects(props: HTMLAttributes<HTMLDivElement>) {
 							image={guerreiros.src}
 						/>
 						<ProjectCard
-							name='artIux Lab'
-							description='Biblioteca código aberto de componentes focada em animações e efeitos visuais'
-							href='https://artiux.vercel.app/'
+							name='ArtIux'
+							description='Biblioteca Open Code de componentes focada em animações e efeitos visuais'
+							href='https://artiux.dev/'
 							target='_blank'
 							image={artiux.src}
 						/>
